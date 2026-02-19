@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(hassan.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.headName {
+    margin: 20px 35px;
+}
+
+.headName h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #15f4ee;
+}
+
+.headNav {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-left: auto;
+}
+
+.headNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;;
+}
+
+a {
+    color: #15f4ee;
+    margin: 0px 25px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.searchUser {
+    max-width: 500px;
+    margin: 20px auto;
+
+    border: 0.3px solid rgb(53, 53, 53);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.searchUser input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(87, 86, 86);
+    margin: 5px 0px;
+    background-color: transparent;
+    color: #fff;
+    
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.searchBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.searchBtn button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #005A9C;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-out;
+}
+
+.searchBtn button:hover {
+    cursor: pointer;
+    background-color: #7B68EE;
+}
+
+.users {
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.userDetails {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.userImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto 0px;
+}
+
+.userImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userName {
+    display: flex;
+    font-size: 1.1em;
+    margin: 5px 15px;
+    width: 350px;
+}
+
+.firstInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainInfo {
+    display: flex;
+}
+
+.mainInfo p {
+    color: rgb(87, 86, 86);
+    margin-left: 5px;
+}
+
+.userEmail {
+    color: rgb(68, 68, 68);
+    font-size: 0.6em;
+    margin: 3px 0px;
+}
+
+.userBio {
+    font-style: italic;
+    font-size: 0.8em;
+    color: rgb(87, 86, 86);
+    margin-right: 10px;
+}
+
+.userIcons  {
+    margin: 3px 0px;
+}
+
+.userIcons svg {
+    filter: brightness(0) saturate(100%) invert(61%) sepia(3%) saturate(6%) hue-rotate(359deg) brightness(101%) contrast(88%);
+    transition: filter 0.3s ease-out;
+}
+
+.userIcons svg:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%);
+}
+
+.userBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: -30px;
+}
+
+.userBtn a, form button {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease-out;
+}
+
+a img, button img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userBtn a:hover, 
+form button:hover {
+    cursor: pointer;
+    background-color: rgb(202, 202, 202);
+}
+
+.addUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.addUser a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #005A9C;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-out;
+}
+
+.addUser a:hover {
+    cursor: pointer;
+    background-color: #7B68EE;
+}
+
+/* createUser.ejs Styles */
+
+.formUser {
+    width: 500px;
+    margin: 20px auto;
+
+    border: 0.3px solid rgb(53, 53, 53);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.formUser form {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstName, .lastName, .email, .age, .bio {
+    position: relative;
+    width: 100%;
+}
+
+.firstName input,
+.lastName input,
+.email input,
+.age input,
+.bio textarea {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(87, 86, 86);
+    margin: 15px 0px;
+    background-color: transparent;
+    color: #fff;
+    
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+}
+
+.firstName img,
+.lastName img,
+.email img,
+.age img, 
+.bio img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 8px;
+}
+
+::placeholder {
+    color: rgb(202, 202, 202);
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.submitBtn {
+    margin: 5px auto;
+}
+
+.submitBtn button {
+    padding: 8px 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: #40E0D0;
+    color: #000;
+    transition: background-color 0.3s ease-out;
+}
+
+.submitBtn button:hover {
+    cursor: pointer;
+    background-color: #15f4ee;
+}
+
+.notFound {
+    list-style: none;
+    font-family: 'Opens Sans', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+.footPage {
+    position: fixed;
+    color: #fff;
+    bottom: 0;
+    margin: 5px auto;
+    display: flex;
+    justify-self: center;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+@media (max-width: 720px) {
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        max-width: 1200px;
+    }
+
+    .searchUser {
+        max-width: 400px;
+    }
+
+    .users {
+        max-width: 400px;
+        margin: 10px auto;
+    }
+
+    .userImg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .userBtn a, form button {
+        padding: 5px;
+    }
+
+    .formUser {
+        width: 400px;
+    }
+}

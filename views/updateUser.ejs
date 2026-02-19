@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="head">
+        <div class="headName">
+            <h1><%= title %></h1>
+        </div>
+        <div class="headNav">
+            <%- include('navbar') %>
+        </div>
+    </div>
+    <%- include('partials/errors.ejs') %>
+    <div class="formUser">
+        <form action="/<%= user.id %>/update" method="POST">
+            <div class="firstName">
+                <input type="text" name="firstName" value="<%= user.firstName %>" required>
+                <img src="idcard.svg" alt="">
+            </div>
+            <div class="lastName">
+                <input type="text" name="lastName" value="<%= user.lastName %>" required>
+                <img src="idcard.svg" alt="">
+            </div>
+            <div class="email">
+                <input type="email" name="email" value="<%= user.email %>" required>
+                <img src="email.svg" alt="">
+            </div>
+            <div class="age">
+                <input type="text" name="age" value="<%= user.age %>">
+                <img src="age.svg" alt="">
+            </div>
+            <div class="bio">
+                <textarea name="bio" id="bio" value="<%= user.bio %>" placeholder="About you..."></textarea>
+            </div>
+            <div class="submitBtn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="addUser">
+        <a href="/">Back to Home</a>
+    </div>
+    <div class="footPage">
+        <%- include('footer') %>
+    </div>
+</body>
+</html>

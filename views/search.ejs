@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="head">
+        <div class="headName">
+            <h1><%= title %></h1>
+        </div>
+        <div class="headNav">
+            <%- include('navbar') %>
+        </div>
+    </div>
+    <%- include('partials/errors.ejs') %>
+    <ul class="users">
+        <% if (locals.user && user.length > 0) { %>
+            <% user.forEach(user => { %>
+                <li class="userDetails">
+                    <div class="userName">
+                        <div class="firstInfo">
+                            <div class="mainInfo">
+                                <h4><%= user.firstName %> <%= user.lastName %></h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% }); %>
+        <% } else { %>
+            <li class="notFound">No users found.</li>
+        <% } %>
+    </ul>
+    <div class="footPage">
+        <%- include('footer') %>
+    </div>
+</body>
+</html>
